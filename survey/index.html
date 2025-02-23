@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Survey Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <h1>Feedback Survey Form</h1>
+        <form id="survry-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+           
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="150">
+
+            <label for="feedback-type">Type of feedback:</label>
+            <select id="feedback-type" name="feedback-type">
+                <option value="position">Positive</option>
+                <option value="negative">Negative</option>
+                <option value="suggestion">Suggestion</option>
+            </select>
+
+            <fieldset>
+                <legend>Services Used:</legend>
+                <input type="checkbox" id="service1" name="services" value="service1">
+
+                <label for="service1">Service 1</label><br>
+                <input type="checkbox" id="service2" name="services" value="services1">
+
+                <label for="service2">Service 2</label><br>
+                <input type="checkbox" id="service3" name="services" value="services2">
+
+                <label for="service3">Service 3</label><br>
+
+            </fieldset>
+            <label for="comments">Additional Comments:</label>
+            <textarea name="comments" id="comments" rows="4"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
     
 </body>
 </html>
